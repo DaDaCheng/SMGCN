@@ -108,7 +108,7 @@ if uniform_sample:
     y=data.y.detach().clone().cpu()
 
     train_mask=torch.zeros(N,dtype=torch.bool)
-    test_mask=torch.ones(N,dtype=torch.bool)
+    test_mask=torch.zeros(N,dtype=torch.bool)
     torch.manual_seed(seed+int(rate*100000)+100)
     nn=int(rate*N)
     train_mask[:nn]=True
